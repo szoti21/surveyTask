@@ -1,4 +1,6 @@
-package main.java.com.model;
+package com.surveytask.model;
+
+import java.util.Objects;
 
 public class Member {
     private int memberId;
@@ -43,6 +45,18 @@ public class Member {
 
     public void setActive(boolean active) {
         isActive = active;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Member member = (Member) o;
+        return memberId == member.memberId;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(memberId);
     }
 
     @Override

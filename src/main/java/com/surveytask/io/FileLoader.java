@@ -1,8 +1,8 @@
-package main.java.com.io;
+package com.surveytask.io;
 
-import main.java.com.model.Member;
-import main.java.com.model.Participation;
-import main.java.com.model.Survey;
+import com.surveytask.model.Member;
+import com.surveytask.model.Participation;
+import com.surveytask.model.Survey;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -15,7 +15,7 @@ public class FileLoader {
 
     //Members
     public Map<Integer, Member> readMembers(){
-        Scanner sc = null;
+        Scanner sc;
         try {
             sc = new Scanner(new File(FILE_SOURCE + "OO - 2 - Members.csv"));
         } catch (
@@ -37,7 +37,7 @@ public class FileLoader {
 
     //Statuses
     public Map<Integer, String> readStatuses(){
-        Scanner sc = null;
+        Scanner sc;
         try {
             sc = new Scanner(new File(FILE_SOURCE + "OO - 2 - Statuses.csv"));
         } catch (FileNotFoundException e) {
@@ -56,7 +56,7 @@ public class FileLoader {
 
     //Surveys
     public Map<Integer, Survey> readSurveys(){
-        Scanner sc = null;
+        Scanner sc;
         try {
             sc = new Scanner(new File( FILE_SOURCE+ "OO - 2 - Surveys.csv"));
         } catch (FileNotFoundException e) {
@@ -77,7 +77,7 @@ public class FileLoader {
 
     //Participation
     public List<Participation> readParticipation(){
-        Scanner sc = null;
+        Scanner sc;
         try {
             sc = new Scanner(new File(FILE_SOURCE + "OO - 2 - Participation.csv"));
         } catch (FileNotFoundException e) {

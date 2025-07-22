@@ -1,4 +1,4 @@
-package main.java.com.model;
+package com.surveytask.model;
 
 public class Participation {
     private int memberId;

@@ -1,4 +1,6 @@
-package main.java.com.model;
+package com.surveytask.model;
+
+import java.util.Objects;
 
 public class Survey {
     private int surveyId;
@@ -53,6 +55,18 @@ public class Survey {
 
     public void setFilteredPoints(int filteredPoints) {
         this.filteredPoints = filteredPoints;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Survey survey = (Survey) o;
+        return surveyId == survey.surveyId;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(surveyId);
     }
 
     @Override
